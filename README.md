@@ -1,27 +1,48 @@
-# email-correspondence · 邮件沟通
+# Email Assistant
 
-写信、回信、整理附件，让每封邮件贴合关系和当下要说的事。
+Read what matters. Write what you mean. Keep the reply short.
 
-想分享近况、给老师发作品、补充一句说明，或处理工作往来时，告诉它你想说什么。它会把内容写成合适的邮件，保留你的意思，按熟悉程度和场合调整语气。简短的回复就简短写，不必每次重新问好、回顾背景，再约一次下次见面。
+Find an old message, catch up on a conversation, turn rough notes into a clear email, or send a reply with the right attachments. Email Assistant helps with each step through the mail tools already available to your assistant.
 
-需要发送时，它会通过已连接的邮箱确认收件人、整理链接和附件，并核对发送结果。想接着原邮件回复，可以直接说“回在这封下面，不开新主题”。
+- **Read and find:** search correspondence, summarize threads, and pull out requests and deadlines.
+- **Write and reply:** draft, shorten, or translate emails while keeping the facts and your intended tone.
+- **Send and attach:** check recipients, include the right files, and keep replies in the original conversation.
+- **Organize:** label, archive, or otherwise handle a selected set of emails when you ask.
+- **Follow up:** identify unanswered requests and create reminders or scheduled sends when you request them and suitable tools are available.
 
-## 可以这样用
+Writing starts with the point. A quick reply stays quick; a detailed request keeps the information the recipient needs. Greetings and sign-offs follow the conversation rather than a fixed template.
 
-- “帮我写封英文邮件，分享这份资料，附上说明文件。”
-- “这封太客套了，改得像我平时说话，但别改事实。”
-- “补充这句话，接着原邮件回复。”
-- “找到这个联系人，核对附件后帮我发过去。”
+## Try it
 
-## 使用
+```text
+Use $email-assistant to summarize this thread and tell me what needs a reply.
+```
 
-将整个 `email-correspondence` 文件夹放入支持 `SKILL.md` 的技能目录。可以通过 `$email-correspondence` 调用，也可由支持自动选择技能的助手按任务使用。
+```text
+Use $email-assistant to turn these notes into a short email. Keep the dates and amounts.
+```
 
-起草邮件不需要邮箱连接。查找往来邮件、发送和核对结果需要可用且已授权的邮件连接；本技能不自带邮箱账号或发送服务。
+```text
+Use $email-assistant to reply in the same thread and attach these two files.
+```
+
+## Setup
+
+Place the `email-assistant` folder in your assistant's skill directory. The skill uses the standard `SKILL.md` format; optional display metadata is included for Codex. Invoke it as `$email-assistant`, or let a host that supports automatic skill selection choose it for an email task.
+
+Drafting works without a mailbox connection. Searching, sending, organizing, reminders, and scheduled sends depend on the authorized tools available in your environment. This skill supplies instructions, not an email account, mail server, or background service.
+
+## 中文
+
+**邮件助手：读邮件、抓重点、写回复、带附件发送；简短清楚，不绕弯子。**
+
+可以帮你查找往来邮件、概括一段对话、列出需要回复的问题和截止日期，也能把零散想法写成邮件、翻译或改短已有草稿。需要发送时，核对收件人、链接和附件；继续原话题时，接着原邮件回复。
+
+你也可以要求它整理指定邮件，或设置提醒和定时发送。这些操作需要相应的邮箱或日程工具。只让它读信或写草稿时，不会自动发信、转发或清理邮箱。
 
 ## Privacy
 
-The skill contains general instructions only. It ships without real messages, contacts, account details, or personal attachments. Mail access and sending follow the user's authorization and the connected application's permissions.
+The package contains general instructions only. It includes no real correspondence, contacts, account details, or personal attachments. Private mail stays within the task and the tools you authorize.
 
 ## License
 
