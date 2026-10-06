@@ -1,0 +1,4 @@
+interface:
+  display_name: "邮件沟通"
+  short_description: "写信、回信、整理附件，让每封邮件贴合关系和当下要说的事。"
+  default_prompt: "用 $email-correspondence 帮我处理这封邮件，保留我的意思，写得自然；发送时按我的要求选择新邮件或原主题回复。"
