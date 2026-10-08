@@ -1,6 +1,6 @@
 ---
 name: email-assistant
-description: Read emails, find what needs attention, write concise replies, and send with the right attachments. Use for drafting, translating, searching correspondence, handling a mail thread, or organizing an inbox through a connected mailbox.
+description: Read emails, find what needs attention, write concise replies, and send with the right attachments. Use for drafting, rewriting, shortening, or translating an email; replying in a thread; searching correspondence; summarizing a conversation; finding follow-ups and deadlines; or organizing an inbox through a connected mailbox.
 license: PolyForm-Noncommercial-1.0.0
 ---
 

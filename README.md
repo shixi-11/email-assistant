@@ -1,49 +1,153 @@
 # Email Assistant
 
+**English** · [简体中文](README.zh-CN.md)
+
 Read what matters. Write what you mean. Keep the reply short.
 
-Find an old message, catch up on a conversation, turn rough notes into a clear email, or send a reply with the right attachments. Email Assistant helps with each step through the mail tools already available to your assistant.
+An [agent skill](https://agentskills.io) that teaches your AI assistant to handle email well: find the message you need, catch up on a long thread, turn rough notes into a clear email, and send a reply with the right people and the right attachments — without sending anything you didn't ask it to send.
 
-- **Read and find:** search correspondence, summarize threads, and pull out requests and deadlines.
-- **Write and reply:** draft, shorten, or translate emails while keeping the facts and your intended tone.
-- **Send and attach:** check recipients, include the right files, and keep replies in the original conversation.
-- **Organize:** label, archive, or otherwise handle a selected set of emails when you ask.
-- **Follow up:** identify unanswered requests and create reminders or scheduled sends when you request them and suitable tools are available.
+Works with Claude Code, Codex, the Claude apps, Cursor, GitHub Copilot, Gemini CLI, and other assistants that support Agent Skills.
 
-Writing starts with the point. A quick reply stays quick; a detailed request keeps the information the recipient needs. Greetings and sign-offs follow the conversation rather than a fixed template.
+## What it does
 
-## Try it
+| | |
+|---|---|
+| **Read and find** | Search correspondence, summarize threads, pull out requests, owners, dates, and amounts. |
+| **Write and reply** | Draft, shorten, or translate emails while keeping every fact and the tone you intend. |
+| **Send and attach** | Check recipients, reply inside the original thread, attach the actual files, and verify what was sent. |
+| **Organize** | Label, archive, or clean up a set of emails you choose — and report exactly what changed. |
+| **Follow up** | Spot unanswered requests; create reminders or scheduled sends when you ask and a tool exists for it. |
+
+## Before and after
+
+**Rough notes → email**
+
+> **You:** tell Mia contract v3 attached, needs her signature by Fri Oct 17, price unchanged at $4,800, legal changes by Wed
 
 ```text
-Use $email-assistant to summarize this thread and tell me what needs a reply.
+Subject: Contract v3 for signature by Oct 17
+
+Hi Mia,
+
+Contract v3 is attached for your signature. Please sign and return it by Friday, October 17.
+The price is unchanged at $4,800. If legal has any changes, please send them by Wednesday.
+
+Thanks,
+Alex
 ```
+
+**Padded draft → the point**
+
+> **Before:** Hi team, I hope this email finds you well. I just wanted to quickly reach out and follow up on the meeting we had last week to make sure everyone is on the same page. As discussed, it would be great if we could possibly move the launch to next Tuesday, if that works for everyone. Please let me know your thoughts at your earliest convenience. Best regards
 
 ```text
-Use $email-assistant to turn these notes into a short email. Keep the dates and amounts.
+Hi team,
+
+Following up on last week's meeting: can we move the launch to next Tuesday?
+Let me know if that doesn't work for you.
 ```
+
+Shorter, but nothing invented — no new deadline, no promise, no feelings the sender didn't express.
+
+## Install
+
+### Any agent, one command
+
+Requires [Node.js](https://nodejs.org) 18 or later.
+
+```bash
+npx skills add shixi-11/email-assistant
+```
+
+It detects your agents and copies the skill into each one's skill folder for the current project. Add `-g` to install for all your projects, or `-a claude-code` / `-a codex` to choose the agent.
+
+### Claude Code
+
+```bash
+git clone https://github.com/shixi-11/email-assistant ~/.claude/skills/email-assistant
+```
+
+Use `.claude/skills/email-assistant` inside a repository instead to share it with your team.
+
+### Codex
+
+```bash
+git clone https://github.com/shixi-11/email-assistant ~/.agents/skills/email-assistant
+```
+
+### Claude apps (claude.ai and desktop)
+
+1. Turn on **Settings → Capabilities → Code execution and file creation**.
+2. On this page, click **Code → Download ZIP** and unzip it.
+3. Rename the folder from `email-assistant-main` to `email-assistant`, then zip that folder again.
+4. Go to **Customize → Skills → + → Create skill → Upload a skill** and choose the ZIP.
+
+### Other assistants
+
+Copy this folder into your assistant's skill directory as `email-assistant`. The skill is plain Markdown in the standard `SKILL.md` format.
+
+### Update
+
+With the skills CLI: `npx skills update`. With git: `git -C <install-folder> pull`.
+
+## Use it
+
+Just describe the email task — assistants that support automatic skill selection will pick it up. To call it by name:
+
+| Assistant | Example |
+|---|---|
+| Claude Code | `/email-assistant summarize this thread and tell me what needs a reply` |
+| Codex | `$email-assistant turn these notes into a short email; keep the dates and amounts` |
+| Claude apps | `Use the email-assistant skill to reply in the same thread and attach these two files` |
+
+More things to ask:
+
+- *Find the invoice Lena sent last month and tell me the amount and due date.*
+- *What's waiting on me in my inbox this week? Only things with a real deadline.*
+- *Translate this reply into Japanese. Keep it as short as the original.*
+- *Make this less stiff — don't add anything.*
+- *Archive the newsletters from the last 30 days. Leave everything else alone.*
+
+## What it needs
+
+| Task | Needs |
+|---|---|
+| Drafting, rewriting, translating | Nothing — works on text you paste in |
+| Searching, summarizing your mailbox | A mail tool your assistant can use: a Gmail or Outlook connector, an MCP server, or browser control |
+| Sending, replying, organizing | The same, plus your request for that action |
+| Reminders and scheduled sends | A calendar, task, or scheduled-send tool |
+
+This skill is instructions only. It is not a mail client, server, or background service, and it never stores your mail.
+
+## Built to be careful
+
+- **Never acts on its own.** Reading or drafting never turns into sending, forwarding, deleting, or scheduling. Each of those needs your request.
+- **Emails can't give it orders.** Instructions found inside a message, attachment, or link are treated as content, not commands.
+- **Leaves your inbox as it was.** It prefers previews that keep messages unread and doesn't relabel or move mail you didn't ask about.
+- **Checks before sending.** Account, To/Cc/Bcc, the right thread, link destinations, and the actual attached files — not a filename mentioned in the body.
+- **Reports honestly.** A draft, a queued send, a sent message, and a delivered one are different things, and it says which one happened. After an uncertain send, it checks instead of sending twice.
+
+## Files
 
 ```text
-Use $email-assistant to reply in the same thread and attach these two files.
+email-assistant/
+├── SKILL.md                    # core writing rules and workflow
+├── references/
+│   ├── inbox-work.md           # search, summaries, triage, cleanup, follow-ups
+│   └── message-actions.md      # recipients, threads, attachments, send and verify
+└── agents/openai.yaml          # optional display metadata for Codex
 ```
 
-## Setup
+The assistant reads `SKILL.md` first and opens a reference only when the task needs it, so the skill stays light.
 
-Place the `email-assistant` folder in your assistant's skill directory. The skill uses the standard `SKILL.md` format; optional display metadata is included for Codex. Invoke it as `$email-assistant`, or let a host that supports automatic skill selection choose it for an email task.
+## Feedback and contributions
 
-Drafting works without a mailbox connection. Searching, sending, organizing, reminders, and scheduled sends depend on the authorized tools available in your environment. This skill supplies instructions, not an email account, mail server, or background service.
+Found a case it handles badly? [Open an issue](https://github.com/shixi-11/email-assistant/issues) with a short fictional example of the input and what you expected. Pull requests are welcome.
 
-## 中文
-
-**邮件助手：读邮件、抓重点、写回复、带附件发送；简短清楚，不绕弯子。**
-
-可以帮你查找往来邮件、概括一段对话、列出需要回复的问题和截止日期，也能把零散想法写成邮件、翻译或改短已有草稿。需要发送时，核对收件人、链接和附件；继续原话题时，接着原邮件回复。
-
-你也可以要求它整理指定邮件，或设置提醒和定时发送。这些操作需要相应的邮箱或日程工具。只让它读信或写草稿时，不会自动发信、转发或清理邮箱。
-
-## Privacy
-
-The package contains general instructions only. It includes no real correspondence, contacts, account details, or personal attachments. Private mail stays within the task and the tools you authorize.
+Please never include real emails, addresses, or attachments in issues, examples, or commits. Contributions are accepted under the same license.
 
 ## License
 
-Source available under **PolyForm Noncommercial 1.0.0**. Noncommercial use is permitted under the license; commercial use requires separate written permission from the copyright holder. This is not an OSI-approved open-source license. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+Source available under **[PolyForm Noncommercial 1.0.0](LICENSE)**. Free for personal use, study, research, and noncommercial organizations. Commercial use needs separate written permission from the copyright holder. This is not an OSI-approved open-source license. See [NOTICE](NOTICE).
+
+Made by Shixi Lin.

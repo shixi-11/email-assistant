@@ -18,7 +18,7 @@ Forwarding can expose old quoted messages, recipient addresses, and attachments.
 
 Compare visible link text with the actual destination. Verify title-to-link mapping when ambiguous; do not guess a title or include the same destination twice under different labels. Keep private storage paths out of recipient-facing text.
 
-Prefer current supplied files over recreating them. Confirm work, language, version, and purpose; keep bytes and useful filenames intact unless the user requests changes. For a translation or timestamped lyric file, explain what it contains without implying that an audio recording is in the translated language or that its timing has been newly audited.
+Prefer current supplied files over recreating them. Confirm work, language, version, and purpose; keep bytes and useful filenames intact unless the user requests changes. For a translated, converted, or derived file, explain what it contains without implying more than it is: a translated transcript is not a translated recording, and a reformatted file has not been re-checked unless someone checked it.
 
 Use the provider's attachment mechanism or supported MIME tree. A local file path or filename mentioned in the body is not an attachment. Check supported content encodings, filename handling, MIME types, and size limits. For an unfamiliar format, add a brief useful explanation or an authorized accessible source link; do not invent accessibility or publicly upload a private file as a workaround.
 
