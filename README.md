@@ -148,6 +148,6 @@ Please never include real emails, addresses, or attachments in issues, examples,
 
 ## License
 
-Source available under **[PolyForm Noncommercial 1.0.0](LICENSE)**. Free for personal use, study, research, and noncommercial organizations. Commercial use needs separate written permission from the copyright holder. This is not an OSI-approved open-source license. See [NOTICE](NOTICE).
+[MIT](LICENSE). Free to use, change, and share — for personal or commercial work — as long as the copyright notice stays with it.
 
 Made by Shixi Lin.

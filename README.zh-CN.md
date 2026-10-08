@@ -146,6 +146,6 @@ email-assistant/
 
 ## 许可证
 
-源码按 **[PolyForm Noncommercial 1.0.0](LICENSE)** 公开。个人使用、学习、研究和非营利机构可以免费使用；商业用途需要版权人另行书面授权。这不是 OSI 认可的开源许可证。详见 [NOTICE](NOTICE)。
+[MIT](LICENSE)。可以自由使用、修改和分享，个人和商业用途都可以，只需保留版权声明。
 
 光之十一 制作
