@@ -133,7 +133,9 @@ email-assistant/
 ├── references/
 │   ├── inbox-work.md           # 搜索、概括、分轻重、清理、跟进
 │   └── message-actions.md      # 收件人、对话、附件、发送与核对
-└── agents/openai.yaml          # Codex 显示用的可选信息
+├── agents/openai.yaml          # Codex 显示用的可选信息
+├── LICENSE                     # Apache-2.0 许可证
+└── NOTICE                      # 转发、改编时要保留的署名
 ```
 
 助手先读 `SKILL.md`，用到哪一部分才打开对应的参考文件，所以很轻。
@@ -146,6 +148,6 @@ email-assistant/
 
 ## 许可证
 
-[MIT](LICENSE)。可以自由使用、修改和分享，个人和商业用途都可以，只需保留版权声明。
+[Apache-2.0](LICENSE)。可以自由使用、修改和分享，个人和商业用途都可以。转发、改编或放进产品（包括收费产品）时，需要保留 [NOTICE](NOTICE) 文件——里面写着本项目名称 Email Assistant 和作者。
 
 光之十一 制作

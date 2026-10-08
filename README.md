@@ -135,7 +135,9 @@ email-assistant/
 ├── references/
 │   ├── inbox-work.md           # search, summaries, triage, cleanup, follow-ups
 │   └── message-actions.md      # recipients, threads, attachments, send and verify
-└── agents/openai.yaml          # optional display metadata for Codex
+├── agents/openai.yaml          # optional display metadata for Codex
+├── LICENSE                     # Apache-2.0
+└── NOTICE                      # attribution to keep when redistributing
 ```
 
 The assistant reads `SKILL.md` first and opens a reference only when the task needs it, so the skill stays light.
@@ -148,6 +150,6 @@ Please never include real emails, addresses, or attachments in issues, examples,
 
 ## License
 
-[MIT](LICENSE). Free to use, change, and share — for personal or commercial work — as long as the copyright notice stays with it.
+[Apache-2.0](LICENSE). Free to use, change, and share, for personal or commercial work. If you redistribute it or build it into a product, including a paid one, keep the [NOTICE](NOTICE) file, which credits Email Assistant and its author.
 
 Made by Shixi Lin.
