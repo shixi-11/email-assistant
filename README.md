@@ -15,7 +15,7 @@ Works with Claude Code, Codex, the Claude apps, Cursor, GitHub Copilot, Gemini C
 | **Read and find** | Search correspondence, summarize threads, pull out requests, owners, dates, and amounts. |
 | **Write and reply** | Draft, shorten, or translate emails while keeping every fact and the tone you intend. |
 | **Send and attach** | Check recipients, reply inside the original thread, attach the actual files, and verify what was sent. |
-| **Organize** | Label, archive, or clean up a set of emails you choose — and report exactly what changed. |
+| **Organize** | Classify existing mail, rename or merge categories, and set rules for future mail with the inbox behavior and exceptions you choose. |
 | **Follow up** | Spot unanswered requests; create reminders or scheduled sends when you ask and a tool exists for it. |
 
 ## Before and after
@@ -107,6 +107,7 @@ More things to ask:
 - *Translate this reply into Japanese. Keep it as short as the original.*
 - *Make this less stiff — don't add anything.*
 - *Archive the newsletters from the last 30 days. Leave everything else alone.*
+- *Group recurring service notifications, including future mail. Keep verification codes and sign-in links in the inbox without custom labels.*
 
 ## What it needs
 
@@ -134,6 +135,7 @@ email-assistant/
 ├── SKILL.md                    # core writing rules and workflow
 ├── references/
 │   ├── inbox-work.md           # search, summaries, triage, cleanup, follow-ups
+│   ├── mailbox-organization.md # categories, merges, rules, verification-mail exceptions
 │   └── message-actions.md      # recipients, threads, attachments, send and verify
 ├── agents/openai.yaml          # optional display metadata for Codex
 ├── LICENSE                     # Apache-2.0

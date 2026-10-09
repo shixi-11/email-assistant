@@ -1,6 +1,6 @@
 ---
 name: email-assistant
-description: Read emails, find what needs attention, write concise replies, and send with the right attachments. Use for drafting, rewriting, shortening, or translating an email; replying in a thread; searching correspondence; summarizing a conversation; finding follow-ups and deadlines; or organizing an inbox through a connected mailbox.
+description: Read emails, find what needs attention, write concise replies, and send with the right attachments. Use for drafting, rewriting, shortening, or translating an email; replying in a thread; searching correspondence; summarizing a conversation; finding follow-ups and deadlines; or organizing mailbox folders, labels, and incoming-mail rules.
 license: Apache-2.0
 ---
 
@@ -23,6 +23,7 @@ Help the user handle email: understand what arrived, decide what needs doing, an
 Read only the reference needed for the current task:
 
 - For finding mail, summarizing a conversation, extracting tasks, triage, or inbox organization: [Inbox work](references/inbox-work.md).
+- For classification, folder or label names, merging categories, incoming-mail rules, or verification-mail exceptions: also read [Mailbox organization](references/mailbox-organization.md).
 - For recipients, account choice, reply membership, attachments, forwarding, drafts, sending, or send verification: [Message actions](references/message-actions.md).
 
 Ordinary drafting can use the writing rules above alone. A task spanning both workflows may require both references.
