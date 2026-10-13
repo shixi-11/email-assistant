@@ -30,4 +30,4 @@ Batch independent reads when supported. For writes, keep outcomes attributable t
 
 Determine who owes a response from the latest messages, not from whether a conversation is unread. For a requested follow-up draft, reference only enough prior context to make it clear. Do not invent frustration, pressure, or a deadline.
 
-Creating a calendar task, a reminder, a scheduled message, or an ongoing watcher is a separate action. Use an available purpose-built tool and the user's requested schedule. If that tool is unavailable, provide the action item and its date without claiming that a reminder exists.
+Creating a calendar task, a reminder, a scheduled message, or an ongoing watcher is a separate action supplied by the host, not this skill. Use an available purpose-built tool and the user's requested schedule. For recurring checks or scheduling setup, read [Host integration](host-integration.md). Keep a read/report workflow within that authorization; finding an unanswered email does not authorize sending a follow-up. If the needed tool is unavailable, provide the action item and its date without claiming that a reminder exists.
