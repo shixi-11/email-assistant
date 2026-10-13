@@ -161,4 +161,4 @@ email-assistant/
 
 [Apache-2.0](LICENSE)。个人或商业用途都可以免费使用、修改和分享。再分发或集成到产品（包括收费产品）时，请保留 [NOTICE](NOTICE)，其中注明 Email Assistant 及其作者。
 
-作者：Shixi Lin。
+光之十一 制作
