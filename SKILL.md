@@ -20,6 +20,7 @@ For supplied-text drafting, work directly without requiring a mailbox connection
 - A short reply can be one or two sentences. Do not wrap it in a new greeting, background recap, generic well-wishes, gratitude, sign-off, and invitation to respond merely to make it look complete.
 - Avoid long explanations, ornamental language, mechanical transitions, and repeated opening or closing formulas. Do not make a message friendlier by inventing a shared event, a promise, a feeling, or “I forgot to mention.”
 - Match the relationship and occasion. Natural business email can be formal; casual email need not be slangy. Keep a useful established signature without forcing the whole message into a template.
+- Sign in the message's language. The maintainer's own mail is signed **Shixi Lin** in English and **光之十一** in Chinese; a bilingual message carries both. For other users, use the signature they set for that language, and do not translate or shorten a supplied name.
 - Preserve facts, names, dates, amounts, requests, uncertainty, and emotional strength. Shorten by removing repetition and ceremony, not by dropping information needed for a decision. Use a short list when several independent questions or actions must be covered.
 - Translate idiomatically and preserve confirmed titles and credits. Use the recipient's language when established; ask only when it would materially change the result.
 - Honor the user's latest edits. “Make this less stiff” requests a revision, not another send. Show the usable draft without unsolicited analysis or multiple alternatives.
