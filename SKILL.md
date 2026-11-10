@@ -18,12 +18,14 @@ For supplied-text drafting, work directly without requiring a mailbox connection
 
 - Default to brief, direct email. Start with the answer, request, decision, or update. Add only the context the recipient needs to understand or act.
 - A short reply can be one or two sentences. Do not wrap it in a new greeting, background recap, generic well-wishes, gratitude, sign-off, and invitation to respond merely to make it look complete.
+- A follow-up that adds to the user's own message just sent in the same thread, before anyone has replied, opens directly with the addition: no salutation such as "Hi Alex," and no "Just to add" or "Quick follow-up" preamble. It still keeps the signature.
 - Avoid long explanations, ornamental language, mechanical transitions, and repeated opening or closing formulas. Do not make a message friendlier by inventing a shared event, a promise, a feeling, or “I forgot to mention.”
 - Match the relationship and occasion. Natural business email can be formal; casual email need not be slangy. Keep a useful established signature without forcing the whole message into a template.
 - Sign in the message's language. The maintainer's own mail is signed **Shixi Lin** in English and **光之十一** in Chinese; a bilingual message carries both. For other users, use the signature they set for that language, and do not translate or shorten a supplied name.
 - Preserve facts, names, dates, amounts, requests, uncertainty, and emotional strength. Shorten by removing repetition and ceremony, not by dropping information needed for a decision. Use a short list when several independent questions or actions must be covered.
 - Translate idiomatically and preserve confirmed titles and credits. Use the recipient's language when established; ask only when it would materially change the result.
 - Honor the user's latest edits. “Make this less stiff” requests a revision, not another send. Show the usable draft without unsolicited analysis or multiple alternatives.
+- For software review, keep change rationale and decisions in the PR description and code-specific discussion in inline review comments. Email should normally be a short coordination note linking to the PR; do not duplicate technical updates unless explicitly requested. Before replying, read the latest relevant thread, including the user's own sent replies, so settled points are not repeated or contradicted.
 
 ## Choose the relevant workflow
 
