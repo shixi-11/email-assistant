@@ -4,7 +4,7 @@
 
 Use the intended sending account. If several connected accounts are plausible, resolve from the current conversation or ask; do not choose a business or personal address silently. Verify recipient identity through the smallest useful amount of authorized correspondence when the address is not supplied. A name match alone may be insufficient.
 
-Confirm To, Cc, and Bcc against the request and current thread. Preserve privacy boundaries: do not expand recipients, reveal hidden recipients, or convert a direct reply to reply-all without authorization. Use a supplied or established signature; do not invent addresses, titles, roles, or credentials.
+Confirm To, Cc, and Bcc against the request and current thread. Default reply membership: when the message being answered includes other participants besides the sender in To or Cc, reply to all of them (reply-all), keeping the existing To and Cc and leaving out the sending account itself. Reply only to the sender when the user asks for that, or when the reply is clearly meant for one person, such as a private matter or a note addressed to a single participant. Preserve privacy boundaries: never add Bcc recipients back, reveal hidden recipients, or add people who were not on the thread without authorization. Use a supplied or established signature; do not invent addresses, titles, roles, or credentials.
 
 ## Keep replies in the conversation
 
